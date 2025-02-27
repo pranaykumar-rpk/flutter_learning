@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sample_application/colors.dart';
-import 'package:sample_application/profile_widgets.dart';
+import 'package:flutter_learning/colors.dart';
+import 'package:flutter_learning/profile_widgets.dart';
 
 class CreateProfile extends StatelessWidget {
   const CreateProfile({super.key});

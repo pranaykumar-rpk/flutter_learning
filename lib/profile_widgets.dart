@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_application/colors.dart';
+import 'package:flutter_learning/colors.dart';
 
 class TeamAccountTypeWidget extends StatelessWidget {
   final String type;

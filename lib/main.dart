@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sample_application/27Feb/login_form.dart';
-import 'package:sample_application/27Feb/sign_up_screen.dart';
+import 'package:flutter_learning/27Feb/sign_up_screen.dart';
 
 void main() {
   runApp(HomePage());
