@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_learning/profile.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -30,6 +31,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             spacing: 16,
             children: [
+              Image.asset(
+                'assets/images/signup.jpg',
+                width: 150,
+                height: 150,
+              ),
               TextFormField(
                 validator: (String? value) {
                   if (value == null) {
@@ -72,6 +78,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     if (_formKey.currentState!.validate()) {
                       snackBar = SnackBar(
                           content: Text('Form submitted successfully!'));
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Profile(),
+                      ));
                     } else {
                       snackBar = SnackBar(
                           content: Text('Error: Invalid form details!'));

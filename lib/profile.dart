@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/27Feb/sign_up_screen.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -9,7 +10,7 @@ class Profile extends StatelessWidget {
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
           title: Text('Username'),
-          leading: Icon(Icons.arrow_back_ios),
+          // leading: Icon(Icons.arrow_back_ios),
           actions: [Icon(Icons.menu)],
         ),
         bottomNavigationBar: BottomNavigationBar(items: [
@@ -40,7 +41,7 @@ class Profile extends StatelessWidget {
               children: [
                 buildProfileImageAndData(),
                 buildNameAndBio(),
-                buildButtons(),
+                buildButtons(context),
                 buildTabs(),
                 buildPosts()
               ],
@@ -103,7 +104,7 @@ class Profile extends StatelessWidget {
     );
   }
 
-  Widget buildButtons() {
+  Widget buildButtons(BuildContext context) {
     return Row(
       children: [
         Expanded(
@@ -112,19 +113,24 @@ class Profile extends StatelessWidget {
               Expanded(
                   child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.blue),
-                        child: Center(
-                            child: Text(
-                          'Follow',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        )),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.blue),
+                          child: Center(
+                              child: Text(
+                            'Follow',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          )),
+                        ),
                       ))),
               Expanded(
                   child: Padding(

@@ -1,0 +1,24 @@
+*************** Lists *****************
+
+SingleChildScrollView
+ListView
+ListView.builder
+
+ListView vs Listview.builder
+SingleChildScrollView vs ListView
+
+
+Horizontal List
+Gridview
+
+Assets and Images
+
+Navigation and routing
+
+Next Screen: Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const SecondRoute()),
+  );
+
+
+  Previous Screen: Navigator.pop();
