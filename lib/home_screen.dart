@@ -3,6 +3,8 @@ import 'package:flutter_learning/27Feb/login_form.dart';
 import 'package:flutter_learning/27Feb/sign_up_screen.dart';
 import 'package:flutter_learning/4th_march/counter_screen.dart';
 import 'package:flutter_learning/4th_march/scroll_example.dart';
+import 'package:flutter_learning/5th_march/future_builder_exmple.dart';
+import 'package:flutter_learning/5th_march/stream_builder_exmaple.dart';
 import 'package:flutter_learning/profile.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,6 +62,22 @@ class HomeScreen extends StatelessWidget {
                   ));
                 },
                 child: Text('Counter'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FutureBuilderExample(),
+                  ));
+                },
+                child: Text('Future Builder '),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => StreamBuilderExample(),
+                  ));
+                },
+                child: Text('Stream Builder '),
               )
             ],
           ),

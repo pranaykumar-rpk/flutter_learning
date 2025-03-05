@@ -45,7 +45,7 @@ class _CounterScreenState extends State<CounterScreen> {
                 }
               },
               child: Text('New screen'),
-            )
+            ),
           ],
         ),
       ),
