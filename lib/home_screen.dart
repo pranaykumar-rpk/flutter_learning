@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/10_march/hotel_screen.dart';
+import 'package:flutter_learning/10_march/realtime_list_screen.dart';
 import 'package:flutter_learning/27Feb/login_form.dart';
 import 'package:flutter_learning/27Feb/sign_up_screen.dart';
 import 'package:flutter_learning/4th_march/counter_screen.dart';
@@ -78,7 +80,23 @@ class HomeScreen extends StatelessWidget {
                   ));
                 },
                 child: Text('Stream Builder '),
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => RealTimeListScreen(),
+                  ));
+                },
+                child: Text('Realtime List'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => HotelListScreen(),
+                  ));
+                },
+                child: Text('Hotel Screen'),
+              ),
             ],
           ),
         ),
